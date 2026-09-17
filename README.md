@@ -5,7 +5,7 @@
 
 ![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet)
 ![.NET MAUI](https://img.shields.io/badge/.NET_MAUI-10.0-512BD4?logo=dotnet)
-![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp)
+![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp) 
 
 Aplicación integral para la gestión de una pastelería. El proyecto consta de un backend desarrollado con ASP.NET Core (Web API) y un cliente multiplataforma desarrollado con .NET MAUI utilizando el patrón estricto MVVM.
 
