@@ -20,6 +20,7 @@ public partial class RegistrarPedidoPage : ContentPage
 	public RegistrarPedidoPage()
 	{
 		InitializeComponent();
+        BindingContext = this;
         var fechaMinima = DateTime.Today.AddDays(2);
         PickerFechaEntrega.MinimumDate = fechaMinima;
         PickerFechaEntrega.Date = fechaMinima;

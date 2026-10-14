@@ -6,8 +6,58 @@
              BackgroundColor="#F7F4EF">
 
 	<ScrollView>
-		<VerticalStackLayout Padding="20,20,20,40" Spacing="25">
-            <Label Text="Programar Entrega / Recolección" FontSize="22" FontAttributes="Bold" TextColor="#3E2723" Margin="0,0,0,5" HorizontalOptions="Center"/>
+		<VerticalStackLayout Padding="20,20,20,40" Spacing="20">
+            <Label Text="Programar Entrega / Recolección" FontSize="22" FontAttributes="Bold" TextColor="#3E2723" HorizontalOptions="Center"/>
+
+            <!-- Tarjeta de Resumen del Pastel a Comprar -->
+            <Border Stroke="#EAE4DB" 
+                    StrokeThickness="1" 
+                    BackgroundColor="#FFFFFF" 
+                    Padding="16"
+                    Margin="0,0,0,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="18" />
+                </Border.StrokeShape>
+                <Border.Shadow>
+                    <Shadow Brush="#8B5E34" Offset="0,4" Radius="10" Opacity="0.06" />
+                </Border.Shadow>
+                <Grid ColumnDefinitions="90, *" ColumnSpacing="15" VerticalOptions="Center">
+                    <Border Grid.Column="0" 
+                            StrokeThickness="0" 
+                            BackgroundColor="#FAF8F5" 
+                            HeightRequest="90" 
+                            WidthRequest="90">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="12" />
+                        </Border.StrokeShape>
+                        <Grid>
+                            <Label Text="🎂" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Image Source="{Binding PastelAComprar.FotoUrl}" 
+                                   Aspect="AspectFill" 
+                                   HeightRequest="90" 
+                                   WidthRequest="90" />
+                        </Grid>
+                    </Border>
+                    <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="4">
+                        <Label Text="{Binding PastelAComprar.Nombre}" FontSize="16" FontAttributes="Bold" TextColor="#3E2723" />
+                        <Label Text="{Binding PastelAComprar.Tamanio, StringFormat='Tamaño: {0}'}" FontSize="12" TextColor="#795548" />
+                        <HorizontalStackLayout Spacing="6" Margin="0,2,0,0">
+                            <Border BackgroundColor="#FAF8F5" Stroke="#E0D7CD" StrokeThickness="1" Padding="6,2">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="6" />
+                                </Border.StrokeShape>
+                                <Label Text="{Binding PastelAComprar.Bizcocho.Nombre, StringFormat='Sabor: {0}'}" FontSize="11" TextColor="#5D4037" FontAttributes="Bold" />
+                            </Border>
+                            <Border BackgroundColor="#FFF8F5" Stroke="#FFCCBC" StrokeThickness="1" Padding="6,2">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="6" />
+                                </Border.StrokeShape>
+                                <Label Text="{Binding PastelAComprar.Glaseado.Nombre, StringFormat='Glaseado: {0}'}" FontSize="11" TextColor="#D84315" FontAttributes="Bold" />
+                            </Border>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
 
 			<Border Stroke="#EAE4DB" 
                     StrokeThickness="1" 
